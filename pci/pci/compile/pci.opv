@@ -1,0 +1,1 @@
+ -erf "D:\Ahmed\get\PCI\pci\pci\compile\pci.erf" -work pci -lc D:/Ahmed/get/PCI/pci/library.cfg -fl D:/Ahmed/get/PCI/pci/pci/projlib.cfg -o D:/Ahmed/get/PCI/pci/pci/compile -sve   -O2

@@ -1,0 +1,12 @@
+[Version]
+Version=10.1
+[Designs]
+pci=.\pci\pci.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+pci=1

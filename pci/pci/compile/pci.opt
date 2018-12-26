@@ -1,0 +1,1 @@
+ -u "C:/Aldec/Active-HDL 10.1 64-bit/bin/systf.dll" -v2k5  "D:\Ahmed\get\PCI\pci\pci\src\arbiter.v"  -cs  -g 5  -r -li "D:\Ahmed\get\PCI\pci\pci\compile\pci.epr" -p "D:\Ahmed\get\PCI\pci\pci\pci" 

@@ -1,0 +1,17 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+pci=1
+Built-in symbols=0
+
+[COMPILESTATUS|.\src\arbiter.v]
+FileTimeLow=30711077
+Status=Compiled
+
+[General]
+CurrentVersion=103
+
+[CACHEDOC|Aldec.Project.Generic.7|.\pci\pci.adf|]
+Path=
+
+[Gui config]
+RunFor=100 ns
+
