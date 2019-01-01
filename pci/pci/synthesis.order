@@ -1,1 +1,4 @@
 i<>.\src\arbiter.v
+i<>.\src\contaner.v
+i<>.\src\device.v
+i<>.\src\testbench.v

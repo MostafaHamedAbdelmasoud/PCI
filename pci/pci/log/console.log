@@ -1,0 +1,1244 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Error: VCP2580 device.v : (3, 72): Error at port frame. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 85): Error at port i_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 94): Error at port t_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5113 device.v : (65, 16): ad is not a vector.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/arbiter.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module arbiter found in current working library.
+# Info: VCP2113 Module device found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (50, 24): Implicit net declaration, symbol req1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 29): Implicit net declaration, symbol req2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 34): Implicit net declaration, symbol req3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 39): Implicit net declaration, symbol gnt1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 44): Implicit net declaration, symbol gnt2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 49): Implicit net declaration, symbol gnt3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 59): Implicit net declaration, symbol rst has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 43): Implicit net declaration, symbol reset has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 53): Implicit net declaration, symbol AD has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 66): Implicit net declaration, symbol d_sel has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 79): Implicit net declaration, symbol c_be has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 106): Implicit net declaration, symbol checker has not been declared in module tb.
+# Warning: VCP2605 testbench.v : (52, 73): Port connection for port frame violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (52, 88): Port connection for port i_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (52, 97): Port connection for port t_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (53, 72): Port connection for port frame violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (53, 87): Port connection for port i_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (53, 96): Port connection for port t_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (54, 72): Port connection for port frame violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (54, 87): Port connection for port i_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Warning: VCP2605 testbench.v : (54, 96): Port connection for port t_ready violates IEEE 1364. Only net expression can be connected to output/inout port.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 9 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module arbiter found in current working library.
+# Info: VCP2113 Module device found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (50, 24): Implicit net declaration, symbol req1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 29): Implicit net declaration, symbol req2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 34): Implicit net declaration, symbol req3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 39): Implicit net declaration, symbol gnt1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 44): Implicit net declaration, symbol gnt2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 49): Implicit net declaration, symbol gnt3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 55): Implicit net declaration, symbol frame has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 59): Implicit net declaration, symbol rst has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 43): Implicit net declaration, symbol reset has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 53): Implicit net declaration, symbol AD has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 66): Implicit net declaration, symbol d_sel has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 79): Implicit net declaration, symbol c_be has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 88): Implicit net declaration, symbol i_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 97): Implicit net declaration, symbol t_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 106): Implicit net declaration, symbol checker has not been declared in module tb.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:32 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# 27 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:33 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 100 ns
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module arbiter found in current working library.
+# Info: VCP2113 Module device found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (50, 24): Implicit net declaration, symbol req1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 29): Implicit net declaration, symbol req2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 34): Implicit net declaration, symbol req3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 39): Implicit net declaration, symbol gnt1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 44): Implicit net declaration, symbol gnt2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 49): Implicit net declaration, symbol gnt3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 55): Implicit net declaration, symbol frame has not been declared in module tb.
+# Info: VCP2876 testbench.v : (50, 59): Implicit net declaration, symbol rst has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 43): Implicit net declaration, symbol reset has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 53): Implicit net declaration, symbol AD has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 66): Implicit net declaration, symbol d_sel has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 79): Implicit net declaration, symbol c_be has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 88): Implicit net declaration, symbol i_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 97): Implicit net declaration, symbol t_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (52, 106): Implicit net declaration, symbol checker has not been declared in module tb.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'tb' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:34 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'tb' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:35 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 1ns
+# KERNEL: stopped at time: 1 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'tb' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:35 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 0.1ns
+# KERNEL: stopped at time: 100 ps
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'tb' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:36 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 1ns
+# KERNEL: stopped at time: 1 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'tb' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'device' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:36 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run .5ns
+# KERNEL: stopped at time: 500 ps
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (51, 24): Implicit net declaration, symbol req1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 29): Implicit net declaration, symbol req2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 34): Implicit net declaration, symbol req3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 39): Implicit net declaration, symbol gnt1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 44): Implicit net declaration, symbol gnt2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 49): Implicit net declaration, symbol gnt3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 55): Implicit net declaration, symbol frame has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 59): Implicit net declaration, symbol rst has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 43): Implicit net declaration, symbol reset has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 53): Implicit net declaration, symbol AD has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 66): Implicit net declaration, symbol d_sel has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 79): Implicit net declaration, symbol c_be has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 88): Implicit net declaration, symbol i_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 97): Implicit net declaration, symbol t_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 106): Implicit net declaration, symbol checker has not been declared in module tb.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:37 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+endsim
+#  Simulation has been stopped
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:37 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+# 27 signal(s) traced.
+run .5ns
+# KERNEL: stopped at time: 500 ps
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:38 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run .5ns
+# KERNEL: stopped at time: 500 ps
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:38 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 5ns
+# KERNEL: stopped at time: 5 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:38 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 20ns
+# KERNEL: stopped at time: 20 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:39 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 500ns
+# KERNEL: stopped at time: 500 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:39 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 50ns
+# KERNEL: stopped at time: 50 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.2 [s]
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:40 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: tb (tb)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 500ns
+# KERNEL: stopped at time: 500 ns
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (51, 24): Implicit net declaration, symbol req1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 29): Implicit net declaration, symbol req2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 34): Implicit net declaration, symbol req3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 39): Implicit net declaration, symbol gnt1 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 44): Implicit net declaration, symbol gnt2 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 49): Implicit net declaration, symbol gnt3 has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 55): Implicit net declaration, symbol frame has not been declared in module tb.
+# Info: VCP2876 testbench.v : (51, 59): Implicit net declaration, symbol rst has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 43): Implicit net declaration, symbol reset has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 53): Implicit net declaration, symbol AD has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 66): Implicit net declaration, symbol d_sel has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 79): Implicit net declaration, symbol c_be has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 88): Implicit net declaration, symbol i_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 97): Implicit net declaration, symbol t_ready has not been declared in module tb.
+# Info: VCP2876 testbench.v : (53, 106): Implicit net declaration, symbol checker has not been declared in module tb.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/testbench.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 device.v : (35, 12): Implicit net declaration, symbol ad has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 testbench.v : (51, 24): Implicit net declaration, symbol req1 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 29): Implicit net declaration, symbol req2 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 34): Implicit net declaration, symbol req3 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 39): Implicit net declaration, symbol gnt1 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 44): Implicit net declaration, symbol gnt2 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 49): Implicit net declaration, symbol gnt3 has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 55): Implicit net declaration, symbol frame has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (51, 59): Implicit net declaration, symbol rst has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 43): Implicit net declaration, symbol reset has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 53): Implicit net declaration, symbol AD has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 66): Implicit net declaration, symbol d_sel has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 79): Implicit net declaration, symbol c_be has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 88): Implicit net declaration, symbol i_ready has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 97): Implicit net declaration, symbol t_ready has not been declared in module t_b.
+# Info: VCP2876 testbench.v : (53, 106): Implicit net declaration, symbol checker has not been declared in module t_b.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: t_b.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+t_b t_b
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:42 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+# 27 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+run 500ns
+# KERNEL: stopped at time: 500 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:43 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+t_b t_b
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:44 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+# Waveform file 'untitled.awc' connected to 'D:/Ahmed/get/PCI/pci/pci/src/wave.asdb'.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'PCI_contaner' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'STACK_ENH' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'PCI_ARBITER' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'STACK_ENHANCED' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/clk}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/f_reqA}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/f_reqB}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/f_reqC}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/addA}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/addB}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/addC}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/dA}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/dB}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/dC}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/x}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/y}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/req1}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/req2}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/req3}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/gnt1}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/gnt2}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/gnt3}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/frame}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/rst}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/reset}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/AD}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/d_sel}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/c_be}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/i_ready}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/t_ready}
+# add wave -noreg {/t_b/T/@ALWAYS#19_1@/checker}
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/clk not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/f_reqA not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/f_reqB not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/f_reqC not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/addA not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/addB not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/addC not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/dA not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/dB not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/dC not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/x not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/y not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/req1 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/req2 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/req3 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/gnt1 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/gnt2 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/gnt3 not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/frame not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/rst not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/reset not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/AD not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/d_sel not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/c_be not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/i_ready not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/t_ready not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /t_b/T/@ALWAYS#19_1@/checker not found in D:/Ahmed/get/PCI/pci/pci/src/wave.asdb.
+alog -O2 -sve   -work pci $dsn/src/arbiter.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'arbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+t_b t_b
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'arbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:46 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+endsim
+#  Simulation has been stopped
+asim -O5 +access +r +m+t_b t_b
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'arbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:47 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+endsim
+# KERNEL: Next step will advance time to 3773024300 ns
+#  Simulation has been stopped
+asim -O5 +access +r +m+t_b t_b
+# ELBREAD: Elaboration process.
+# ELBREAD: You do not have a valid license to run simulation with SLP.
+# Contact Aldec for ordering information - sales@aldec.com.
+# ELBREAD: Warning: Module 'arbiter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.1 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6002 kB (elbread=1023 elab2=4827 kernel=150 sdf=0)
+# KERNEL: ASDB file was created in location D:\Ahmed\get\PCI\pci\pci\src\wave.asdb
+#  3:48 AM, Saturday, December 29, 2018
+#  Simulation has been initialized
+#  Selected Top-Level: t_b (t_b)
+step -out
+step
+restart
+endsim
+# KERNEL: Next step will advance time to 1393040780 ns
+#  Simulation has been stopped
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2570 device.v : (12, 1): Undefined port: checker.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2580 device.v : (3, 91): Error at port i_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 100): Error at port t_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 device.v : (37, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 device.v : (37, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '#' , ''' , '(' , ';' , '@' ... .
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 device.v : (19, 48): frame is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 device.v : (19, 64): AD[1:0] is not a valid left-hand side of a procedural assignment.
+# Error: VCP2000 device.v : (24, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Error: VCP2000 device.v : (30, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Compile failure 4 Errors 0 Warnings  Analysis time: 1[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2580 device.v : (3, 62): Error at port AD. Only NET type is allowed for INPUT or INOUT ports.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2562 device.v : (8, 1): Redeclaration of port d_sel.
+# Error: VCP2562 device.v : (9, 1): Redeclaration of port AD.
+# Error: VCP2505 device.v : (9, 1): Duplicate identifier: AD
+# Error: VCP2562 device.v : (10, 1): Redeclaration of port c_be.
+# Error: VCP2562 device.v : (11, 1): Redeclaration of port req.
+# Error: VCP2505 device.v : (11, 1): Duplicate identifier: req
+# Error: VCP2562 device.v : (12, 1): Redeclaration of port frame.
+# Error: VCP2562 device.v : (13, 1): Redeclaration of port i_ready.
+# Error: VCP2562 device.v : (13, 1): Redeclaration of port t_ready.
+# Error: VCP2580 device.v : (3, 66): Error at port AD. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port req. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port d_sel. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port frame. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port c_be. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port i_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 66): Error at port t_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Compile failure 16 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2562 device.v : (8, 1): Redeclaration of port d_sel.
+# Error: VCP2505 device.v : (8, 1): Duplicate identifier: d_sel
+# Error: VCP2562 device.v : (10, 1): Redeclaration of port c_be.
+# Error: VCP2562 device.v : (11, 1): Redeclaration of port req.
+# Error: VCP2505 device.v : (11, 1): Duplicate identifier: req
+# Error: VCP2562 device.v : (12, 1): Redeclaration of port frame.
+# Error: VCP2562 device.v : (13, 1): Redeclaration of port i_ready.
+# Error: VCP2562 device.v : (13, 1): Redeclaration of port t_ready.
+# Error: VCP2580 device.v : (3, 77): Error at port AD. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2580 device.v : (3, 77): Error at port req. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2560 device.v : (3, 81): Type redeclaration of port: req.
+# Error: VCP2580 device.v : (3, 77): Error at port d_sel. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2560 device.v : (3, 86): Type redeclaration of port: d_sel.
+# Error: VCP2580 device.v : (3, 77): Error at port frame. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2560 device.v : (3, 93): Type redeclaration of port: frame.
+# Error: VCP2580 device.v : (3, 77): Error at port c_be. Only NET type is allowed for INPUT or INOUT ports.
+# Warning: VCP2558 device.v : (3, 100): Size changed at redeclaration of port: c_be.
+# Error: VCP2580 device.v : (3, 77): Error at port i_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2560 device.v : (3, 106): Type redeclaration of port: i_ready.
+# Error: VCP2580 device.v : (3, 77): Error at port t_ready. Only NET type is allowed for INPUT or INOUT ports.
+# Error: VCP2560 device.v : (3, 115): Type redeclaration of port: t_ready.
+# Compile failure 20 Errors 1 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 device.v : (19, 48): frame is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 device.v : (19, 64): AD[1:0] is not a valid left-hand side of a procedural assignment.
+# Error: VCP2000 device.v : (24, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Error: VCP2000 device.v : (30, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Compile failure 4 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/td.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 td.v : (37, 18): Implicit net declaration, symbol t__ready has not been declared in module device.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 device.v : (20, 48): frame is not a valid left-hand side of a procedural assignment.
+# Error: VCP2000 device.v : (28, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Error: VCP2000 device.v : (34, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2000 device.v : (30, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Error: VCP2000 device.v : (36, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2000 device.v : (30, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Error: VCP2000 device.v : (36, 18): Syntax error. Unexpected token: clk[_IDENTIFIER]. Expected tokens: '[' , '(*' , '(' , 'with' , '++' ... .
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (20, 25): Syntax error. Unexpected token: (. Expected tokens: '?' , '->' , '<->' , '||' , '&&' ... .
+# Error: VCP2000 device.v : (20, 32): Syntax error. Unexpected token: }. Expected tokens: ';' , '->' , '<->' , 'dist'.
+# Error: VCP2000 device.v : (40, 17): Syntax error. Unexpected token: ). Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Error: VCP2565 device.v : (3, 62): Undefined direction of external port bitenab.
+# Error: VCP2567 device.v : (3, 62): Undefined direction of internal port bitenab.
+# Compile failure 5 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (20, 25): Syntax error. Unexpected token: (. Expected tokens: '?' , '->' , '<->' , '||' , '&&' ... .
+# Error: VCP2000 device.v : (20, 32): Syntax error. Unexpected token: }. Expected tokens: ';' , '->' , '<->' , 'dist'.
+# Error: VCP2000 device.v : (40, 17): Syntax error. Unexpected token: ). Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Error: VCP2565 device.v : (3, 62): Undefined direction of external port bitenab.
+# Error: VCP2567 device.v : (3, 62): Undefined direction of internal port bitenab.
+# Compile failure 5 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (40, 17): Syntax error. Unexpected token: ). Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Error: VCP2565 device.v : (3, 62): Undefined direction of external port bitenab.
+# Error: VCP2567 device.v : (3, 62): Undefined direction of internal port bitenab.
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2565 device.v : (3, 62): Undefined direction of external port bitenab.
+# Error: VCP2567 device.v : (3, 62): Undefined direction of internal port bitenab.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: STACK_ENH PCI_ARBITER PCI_contaner t_b.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Error: VCP2000 device.v : (57, 21): Invalid syntax in Verilog'95/2001/2005 mode. Unexpected token: , .
+# Error: VCP2000 device.v : (57, 23): Syntax error. Unexpected token: <[O_LESS]. Expected tokens: '[' , '(*' , '++' , '--' , '=' ... .
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (46, 7): Syntax error. Unexpected token: always[_ALWAYS]. The 'always' is a SystemVerilog keyword and cannot be used as an identifier. Use -v2k5, -v2k or -v95 argument for Verilog compilation.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (65, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (68, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 device.v : (67, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 device.v : (67, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (67, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve   -work pci $dsn/src/device.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 device.v : (67, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '(*' , ''' , '(' , '{' , 'integer'' ... .
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].

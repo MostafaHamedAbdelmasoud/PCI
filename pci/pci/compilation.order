@@ -1,1 +1,3 @@
 .\src\arbiter.v
+.\src\device.v
+.\src\testbench.v

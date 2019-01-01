@@ -3,10 +3,13 @@ Current Flow=Generic
 VCS=0
 version=3
 Current Config=compile
+
 [Configurations]
 compile=pci
+
 [Library]
 pci=.\pci\pci.lib
+
 [Settings]
 AccessRead=0
 AccessReadWrite=0
@@ -21,21 +24,34 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=Lattice ECP2
+fileopenfolder=D:\Ahmed\get\PCI\pci\pci\src
+
 [LocalVerilogSets]
 EnableSLP=1
 EnableDebug=0
+
 [LocalVhdlSets]
 CompileWithDebug=0
+
 [$LibMap$]
 pci=.
 Active_lib=
-[Files]
-/arbiter.v=-1
-[Files.Data]
-.\src\arbiter.v=Verilog Source Code
+
 [SpecTracer]
 WindowVisible=0
+
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
+
+[Files]
+/arbiter.v=-1
+/device.v=-1
+/testbench.v=-1
+
+[Files.Data]
+.\src\arbiter.v=Verilog Source Code
+.\src\device.v=Verilog Source Code
+.\src\testbench.v=Verilog Source Code
+
